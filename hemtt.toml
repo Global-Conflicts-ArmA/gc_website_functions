@@ -1,0 +1,13 @@
+name = "GC Website Functions"
+prefix = "gc_website_functions"
+author = "W-Cephei"
+files = [
+    "mod.cpp"
+]
+
+key_name = "{{prefix}}_{{version}}"
+
+releasebuild = [
+    "@zip gc_website_functions_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+]
+

@@ -1,0 +1,17 @@
+release/**
+releases/*
+build_keys/*
+keys/*
+.hemtt/local
+/a3/
+/x/
+
+*.pbo
+*.cache
+*.biprivatekey
+
+
+.vscode
+keys
+venv
+python_code/venv
