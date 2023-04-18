@@ -1,1 +1,1 @@
-PREP(displayMessage);
+PREP(submitReview);

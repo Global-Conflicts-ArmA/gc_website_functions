@@ -1,5 +1,5 @@
 name = "GC Website Functions"
-prefix = "gc_website_functions"
+prefix = "gc_WebsiteFunctions"
 author = "W-Cephei"
 files = [
     "mod.cpp"
@@ -8,6 +8,6 @@ files = [
 key_name = "{{prefix}}_{{version}}"
 
 releasebuild = [
-    "@zip gc_website_functions_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
+    "@zip gc_WebsiteFunctions_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}"
 ]
 

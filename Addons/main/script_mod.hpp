@@ -1,5 +1,5 @@
 #define MAINPREFIX x
-#define PREFIX grad_adminMessages
+#define PREFIX gc_WebsiteFunctions
 
 #include "script_version.hpp"
 
