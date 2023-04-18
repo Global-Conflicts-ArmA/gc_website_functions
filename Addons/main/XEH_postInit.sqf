@@ -2,7 +2,6 @@
 
 private _onSubmitReviewId = ["onSubmitReview", {
 	params ["_message", "_player"]; 
-	systemChat format["onSubmitReview | _message: %1 |  _thePlayer: %2 ", _message, getPlayerUID _player];
 
 	[_message, _player] call FUNC(submitReview);
 	
