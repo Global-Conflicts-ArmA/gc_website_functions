@@ -8,7 +8,10 @@ params [
 if (_message == "" || _unit == objNull) exitWith {};
 
 
-private _thread_id = ["gc_websitefunctions.call_slow_fibonacci", [30]] call py3_fnc_callExtension;
+
+
+
+private _thread_id = ["gc_websitefunctions.call_submit_review", [_message, getPlayerUID _unit, missionName]] call py3_fnc_callExtension;
 private _has_call_finished = ["gc_websitefunctions.has_call_finished", [_thread_id]] call py3_fnc_callExtension;
 
 [
