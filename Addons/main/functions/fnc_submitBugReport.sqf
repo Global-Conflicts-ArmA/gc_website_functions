@@ -7,11 +7,8 @@ params [
 
 if (_message == "" || _unit == objNull) exitWith {};
 
-private _thread_id = ["gc_websitefunctions.call_submit_review", [_message, getPlayerUID _unit, missionName]] call py3_fnc_callExtension;
-
-
+private _thread_id = ["gc_websitefunctions.call_submit_bugreport", [_message, getPlayerUID _unit, missionName]] call py3_fnc_callExtension;
 private _has_call_finished = ["gc_websitefunctions.has_call_finished", [_thread_id]] call py3_fnc_callExtension;
-
 
 
 
@@ -22,13 +19,13 @@ _handle = [{
 
 	if (_has_call_finished) then {
 		private _value = ["gc_websitefunctions.get_call_value", [_thread_id]] call py3_fnc_callExtension;
-		["gc_reviewResponse", [_value], _unit] call CBA_fnc_targetEvent;
+		["gc_bugReportResponse", [_value], _unit] call CBA_fnc_targetEvent;
 		[_pfhID] call CBA_fnc_removePerFrameHandler;
 	} else {
 		private _has_call_finished_pfh = ["gc_websitefunctions.has_call_finished", [_thread_id]] call py3_fnc_callExtension;
 		if (_has_call_finished_pfh) then {
 			private _value = ["gc_websitefunctions.get_call_value", [_thread_id]] call py3_fnc_callExtension;
-			["gc_reviewResponse", [_value], _unit] call CBA_fnc_targetEvent;
+			["gc_bugReportResponse", [_value], _unit] call CBA_fnc_targetEvent;
 			[_pfhID] call CBA_fnc_removePerFrameHandler;
 		};
 	}
